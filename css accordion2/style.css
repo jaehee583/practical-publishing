@@ -1,0 +1,90 @@
+/* Web Fonts : Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5em;
+  color: #333;
+  background-color: #333;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: normal;
+}
+.shop{
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  min-height: 500px;
+  border-radius: 10px;
+  background-color: #eee;
+}
+.shop h1{
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.title{
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.title::after{
+  content: '\f107';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #999;
+  text-align: center;
+  font-family: fontawesome;
+  float: right;
+  color: #fff;
+  transition: 0.3s;
+}
+.title.active::after{
+  transform: rotate(180deg);
+  background-color: #333;
+}
+.content{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 10px;
+  display: none;
+  margin-bottom: 5px;
+}
+.content.active{
+  display: block;
+}
+.content span{
+  display: block;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.content span:last-child{
+  border: none;
+}
+.content span em{
+  float: right;
+  padding: 1px 7px;
+  font-style: normal;
+  background-color: #085797;
+  color: #fff;
+  border-radius: 3px;
+}

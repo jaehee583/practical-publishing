@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css accordion2</title>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="shop">
+    <h1>Shop</h1>
+    <div class="items">
+      <div class="item">
+        <div class="title active">OUTER</div>
+        <div class="content active">
+          <span>Coat <em>$6.45</em></span>
+          <span>Jacket <em>$3.45</em></span>
+          <span>Cardigan <em>$4.45</em></span>
+          <span>Jacket <em>$3.45</em></span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">TOP</div>
+        <div class="content">
+          <span>Short sleeve <em>$3.45</em></span>
+          <span>Stripe <em>$4.45</em></span>
+          <span>Sweater <em>$6.45</em></span>
+          <span>Basic T-shirt <em>$3.45</em></span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">PANTS</div>
+        <div class="content">
+          <span>Blue jeans <em>$4.45</em></span>
+          <span>Dress pants <em>$6.45</em></span>
+          <span>Basic jeans <em>$3.45</em></span>
+          <span>Sportswear <em>$4.45</em></span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">DRESS</div>
+        <div class="content">
+          <span>Blue dress <em>$3.45</em></span>
+          <span>Sky dress <em>$3.45</em></span>
+          <span>Orange dress <em>$3.45</em></span>
+          <span>Pink dress <em>$3.45</em></span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">SKIRTS</div>
+        <div class="content">
+          <span>Long skirt <em>$3.45</em></span>
+          <span>Mini skirt <em>$3.45</em></span>
+          <span>Midi skirt <em>$3.45</em></span>
+          <span>Black skirt <em>$3.45</em></span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="title">ACC</div>
+        <div class="content">
+          <span>Ring <em>$3.45</em></span>
+          <span>necklace <em>$3.45</em></span>
+          <span>hat <em>$3.45</em></span>
+          <span>Sunglasses <em>$3.45</em></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('.title').click(function () {
+      $(this).parent('.item').siblings('.item').children('.content').slideUp()
+      $(this).next().slideDown()
+
+      $(this).parent('.item').siblings('.item').children('.title').removeClass('active')
+      $(this).addClass('active')
+    })
+  </script>
+</body>
+
+</html>
