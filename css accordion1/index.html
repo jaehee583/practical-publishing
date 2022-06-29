@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css accordion1</title>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section>
+    <article>
+      <div class="heading">
+        <img src="./images/youtube.png">
+        <h1><b>YouTube</b>⁠와 <b>YouTube Music</b>⁠에⁠서 광⁠고 없⁠는 감⁠상,<br> 오⁠프⁠라⁠인 저⁠장, 그⁠리⁠고 백⁠그⁠라⁠운⁠드 재⁠생</h1>
+      </div>
+      <div class="accordion">
+        <div class="title active" data-image="./images/youtube01.jpeg">
+          YouTube Premium에는 어떤 기능이 포함되나요?
+        </div>
+        <div class="desc active">
+          광고의 방해 없는 동영상: 수백만 개의 동영상을 광고의 방해 없이 시청하세요. <span>자세히 알아보기</span><br><br>
+          동영상을 오프라인 저장해 오프라인으로 시청: 동영상과 재생목록을 휴대기기에 저장하여 오프라인으로 재생<br><br>
+          백그라운드에서 재생: 다른 앱을 사용하거나 화면이 꺼진 상태에서도 동영상이 재생됨
+        </div>
+        <div class="title" data-image="./images/youtube02.jpeg">
+          동영상과 음악 다운로드 기능은 어떻게 작동하나요?
+        </div>
+        <div class="desc">
+          휴대기기에 동영상과 음악을 오프라인 저장하면<br> 인터넷에 연결하지 않고 최대 30일 동안 오프라인으로 시청하고 감상할 수 있습니다.<br><br>
+          동영상과 음악을 오프라인 저장하는 방법에 대한 자세한 내용은<br> 이 고객센터 <span>도움말</span>을 참조하세요.
+        </div>
+        <div class="title" data-image="./images/youtube03.jpeg">
+          백그라운드 재생이 무엇인가요?
+        </div>
+        <div class="desc">
+          백그라운드 재생을 사용하면 다른 앱을 사용하는 동안이나 휴대기기의 화면이 꺼진 상태에서도 백그라운드에서 동영상과 음악을 계속 재생할 수 있습니다.<br><br>
+          백그라운드 재생에 대한 자세한 내용은 이 고객센터 <span>도움말</span>을 참조하세요.
+        </div>
+        <div class="title" data-image="./images/youtube04.jpeg">
+          멤버십을 취소하려면 어떻게 해야 하나요?
+        </div>
+        <div class="desc">
+          유료 멤버십 페이지에서 멤버십을 취소할 수 있습니다. <br>이 경우 무료 YouTube 계정으로 되돌아갑니다.<br><br>
+          언제든 YouTube Premium에 다시 가입할 수 있습니다.
+        </div>
+      </div>
+      <div class="image">
+        <img src="./images/youtube01.jpeg">
+      </div>
+    </article>
+  </section>
+  <script>
+    $('.title').click(function () {
+      $(this).addClass('active')
+      $(this).siblings('.title').removeClass('active')
+      $(this).siblings('.desc').slideUp()
+      $(this).next().slideDown()
+
+      let dataImage = $(this).attr('data-image')
+      $('.image img').attr('src', dataImage)
+    })
+  </script>
+</body>
+
+</html>
