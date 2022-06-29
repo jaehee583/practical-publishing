@@ -1,0 +1,110 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+*{
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6em;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.tab-section{
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  width: 1000px;
+  margin: auto;
+}
+.heading{
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+.heading h1{
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.heading h1 span{
+  color: crimson;
+}
+
+/* search */
+.heading input[type=text]{
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  width: 100%;
+  outline: none;
+  padding-left: 50px;
+  background: #fff url(./images/search-icon.svg) no-repeat center left 10px;
+  background-size: 23px;
+}
+.heading input[type=text]::placeholder {
+  font-style: italic;
+  color: #999;
+  transition: 0.3s;
+}
+.heading input[type=text]:focus::placeholder {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* tab button */
+.tab-btn{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: hidden;
+  margin-left: 10px;
+}
+.tab-btn li{
+  float: left;
+  width: 120px;
+  text-align: center;
+  padding: 7px;
+  background-color: #eee;
+  border-right: 1px solid #ddd;
+  border-top: 2px solid transparent;
+  cursor: pointer;
+}
+.tab-btn li:hover,
+.tab-btn li.active{
+  background-color: #fff;
+  border-top: 2px solid crimson;
+}
+.tab-btn li:last-child{
+  border-right: none;
+  width: 170px;
+}
+.tabs{
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #fff;
+  padding: 40px;
+}
+.tab{
+  display: none;
+}
+.tab.active{
+  display: block;
+}
+.tab h2{
+  font-size: 26px;
+  text-align: center;
+}
+.tab img{
+  float: left;
+  margin-right: 20px;
+}
+.tab p{
+  overflow: hidden;
+}

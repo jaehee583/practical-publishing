@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tab-jQuery2</title>
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="tab-section">
+    <div class="heading">
+      <h1><span> web publishing</span>, My Skills</h1>
+      <input type="text" placeholder="What are you looking for?">
+    </div>
+    <ul class="tab-btn">
+      <li class="active" data-alt="tab1">HTML5</li>
+      <li data-alt="tab2">CSS3</li>
+      <li data-alt="tab3">JQUERY</li>
+      <li data-alt="tab4">JAVASCRIPT</li>
+      <li data-alt="tab5">CSS FRAMEWORKS</li>
+    </ul>
+    <div class="tabs">
+      <div class="tab active" id="tab1">
+        <h2>HTML5</h2>
+        <img src="./images/platform-logo-01.png" alt="HTML5">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni animi quis recusandae, consequatur doloribus
+          nulla quos id hic rerum, facere voluptas adipisci cum laborum eum veritatis quia porro autem optio?
+          Mollitia, possimus eveniet consequuntur officiis aliquam molestiae inventore optio quod dolores deserunt
+          soluta a cum ea nulla ratione maxime distinctio odit harum, nemo ut. Repellat, similique esse. Voluptatum,
+          distinctio expedita.
+          Corporis doloribus alias optio eveniet libero obcaecati ducimus, repudiandae veritatis mollitia, hic
+          reiciendis consequuntur cupiditate placeat ab aspernatur. Laboriosam at laborum blanditiis adipisci nesciunt
+          ex, iste modi voluptate illo vitae!
+        </p>
+      </div>
+      <div class="tab" id="tab2">
+        <h2>CSS3</h2>
+        <img src="./images/platform-logo-02.png" alt="CSS3">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae minus unde ipsam quaerat. Tempora quae
+          fugit molestiae alias quibusdam possimus fuga quo obcaecati eos velit iure quisquam, autem eaque nisi!
+          Dolores modi nemo quos architecto nostrum omnis. Eaque officiis nemo labore assumenda distinctio ducimus,
+          blanditiis dolor corporis? Dolor cumque rem unde, accusamus officia saepe totam maiores quam quia id alias.
+          Veritatis non minima amet at iure deserunt odit corrupti voluptate error quam sint iste, neque quae velit
+          porro adipisci ab, beatae, perferendis rerum doloribus possimus voluptas. Veniam debitis perspiciatis fugit.
+        </p>
+      </div>
+      <div class="tab" id="tab3">
+        <h2>JQUERY</h2>
+        <img src="./images/platform-logo-03.png" alt="JQUERY">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit odit assumenda sed blanditiis corporis?
+          Cupiditate deserunt natus ex inventore voluptas! Neque, reiciendis obcaecati tempora blanditiis eos recusandae
+          amet eveniet saepe.
+          Beatae totam at, eum velit labore sequi unde quia nihil minima ea hic rerum, repellat adipisci autem, ab
+          laudantium exercitationem incidunt laborum numquam. A, veritatis delectus culpa aliquam eum officiis.
+          Provident obcaecati magnam, saepe quasi nihil facere non natus porro dolore, quod cumque exercitationem sint
+          officia veniam beatae fugit, aut et sequi fugiat sed ipsam! Doloremque magnam neque cumque pariatur?
+        </p>
+      </div>
+      <div class="tab" id="tab4">
+        <h2>JAVASCRIPT</h2>
+        <img src="./images/platform-logo-04.png" alt="JAVASCRIPT">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, eligendi voluptates. Voluptas necessitatibus odio
+          saepe nihil. Distinctio dolore doloremque vel perferendis, aspernatur repellendus laboriosam inventore animi.
+          Possimus beatae magnam quam.
+          Fugiat eaque maiores dignissimos dicta sint mollitia quas temporibus soluta natus cum ratione placeat
+          voluptates veritatis architecto sunt, eum commodi recusandae obcaecati dolores quae repellendus! Ipsum, nemo.
+          Consectetur, sapiente eum.
+          Reiciendis impedit omnis sunt asperiores! Quo dignissimos reprehenderit magnam iusto vero cupiditate
+          obcaecati, culpa, repellat quam quaerat cumque, recusandae labore provident optio veritatis ratione hic harum
+          natus maxime ea soluta?
+        </p>
+      </div>
+      <div class="tab" id="tab5">
+        <h2>CSS FRAMEWORKS</h2>
+        <img src="./images/platform-logo-05.png" alt="CSS FRAMEWORKS">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, eligendi voluptates. Voluptas necessitatibus odio
+          saepe nihil. Distinctio dolore doloremque vel perferendis, aspernatur repellendus laboriosam inventore animi.
+          Possimus beatae magnam quam.
+          Fugiat eaque maiores dignissimos dicta sint mollitia quas temporibus soluta natus cum ratione placeat
+          voluptates veritatis architecto sunt, eum commodi recusandae obcaecati dolores quae repellendus! Ipsum, nemo.
+          Consectetur, sapiente eum.
+          Reiciendis impedit omnis sunt asperiores! Quo dignissimos reprehenderit magnam iusto vero cupiditate
+          obcaecati, culpa, repellat quam quaerat cumque, recusandae labore provident optio veritatis ratione hic harum
+          natus maxime ea soluta?
+        </p>
+      </div>
+    </div>
+  </div>
+  <script>
+    $('.tab-btn li').click(function () {
+      $(this).addClass('active')
+      $(this).siblings().removeClass('active')
+      $('.tabs .tab').removeClass('active')
+      $('#' + $(this).attr('data-alt')).addClass('active')
+    })
+  </script>
+</body>
+
+</html>
