@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃</title>
+  <!-- Jqurery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="overlay"></div>
+    <header class="header">
+      <div class="container">
+        <span class="logo">
+          <a href="#">coding</a>
+        </span>
+        <div class="gnb">
+          <a class="active" href="#about">about</a>
+          <a href="#skills">skills</a>
+          <a href="#work">work experience</a>
+          <a href="#portfolio">portfolio</a>
+          <a href="#epilogue">epilogue</a>
+        </div>
+      </div>
+      <div class="trigger">
+        <i class="xi-bars"></i>
+      </div>
+    </header>
+    <section id="about">
+      <div class="container">
+        <h1>about</h1>
+      </div>
+    </section>
+    <section id="skills">
+      <div class="container">
+        <h1>skills</h1>
+      </div>
+    </section>
+    <section id="work">
+      <div class="container">
+        <h1>work experience</h1>
+      </div>
+    </section>
+    <section id="portfolio">
+      <div class="container">
+        <h1>portfolio</h1>
+      </div>
+    </section>
+    <section id="epilogue">
+      <div class="container">
+        <h1>epilogue</h1>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // GNB Checked
+    $('.gnb a').click(function () {
+      $(this).addClass('active');
+      $(this).siblings().removeClass('active');
+    })
+    // Trigger
+    $('.trigger').click(function () {
+      $('.gnb, body, .overlay').toggleClass('active')
+      $(this).toggleClass('active')
+    })
+    // Overlay
+    $('.overlay, .gnb a').click(function () {
+      $('.gnb, .trigger, body, .overlay').removeClass('active')
+    })
+  </script>
+</body>
+
+</html>
